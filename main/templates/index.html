@@ -248,8 +248,8 @@
       <div class="container">
         <div class="row justify-content-center pb-5 mb-3">
           <div class="col-md-7 heading-section heading-section-white text-center ftco-animate">
-            <h2>Happy Clients &amp; Feedbacks</h2>
-            <span class="subheading">Testimonies</span>
+            <h2>Thought OF THe Day </h2>
+            <span class="subheading">Stay Curious</span>
           </div>
         </div>
         <div class="row ftco-animate">
@@ -260,7 +260,7 @@
                 <div class="testimony-wrap py-4">
                 	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
                   <div class="text">
-                    <p class="mb-4">{{ x.thought }}</p>
+                    <p class="mb-4">{{ x.day }}</p>
                     <div class="d-flex align-items-center">
                     	<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
                     	<div class="pl-3">
@@ -290,7 +290,7 @@
 			{% for i in blog %}
           <div class="col-md-4 d-flex ftco-animate">
             <div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20 rounded" style="background-image:url({{i.images.url}})">
+              <a href="{% url 'name' name=i.name %}" class="block-20 rounded" style="background-image:url({{i.images.url}})">
               </a>
               <div class="text mt-3">
               	<div class="meta mb-2">
@@ -298,7 +298,7 @@
                   <div><a href="#">{{ i.author }}</a></div>
                   <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
                 </div>
-                <h3 class="heading"><a href="#">{{ i.description }}</a></h3>
+                <h3 class="heading"><a href="{% url 'name' name=i.name %}">{{ i.description }}</a></h3>
               </div>
             </div>
           </div>

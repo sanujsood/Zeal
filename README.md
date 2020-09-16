@@ -1,2 +1,0 @@
-# Zeal
-Zeal Society Website
