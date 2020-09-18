@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'blog',
     'tinymce',
     'events',
-]
+    'register',
+    ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

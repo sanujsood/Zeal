@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from blog.models import Blog
 from events.models import Events
-from .models import Thought
+from .models import Thought,Schedule
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 
@@ -13,9 +13,9 @@ def home(request):
     
     blog    = Blog.objects.filter(trends = 'Y')
     th = Thought.objects.all()
- 
+    sch=Schedule.objects.all()
 
-    return render(request,'index.html', {'th':th,'blog':blog})
+    return render(request,'index.html', {'th':th,'blog':blog,'sch':sch})
 
 
 def blog(request):
