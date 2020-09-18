@@ -18,5 +18,9 @@ class Events (models.Model):
     description  = models.TextField(default='')
 
 
-    # def __str__(self):
-    #     return self.name 
+
+    
+
+    def __str__(self):
+        return self.name 
+

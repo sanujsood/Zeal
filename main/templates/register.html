@@ -1,0 +1,36 @@
+{% extends "base.html"%} {% load static %} {% block content %}
+<html>
+  <body>
+    <section class="page-wrapper">
+      <div class="contact-section">
+        <div class="container">
+          <div class="row">
+            <!-- Contact Form -->
+            <div class="contact-form col-md-6">
+              <form
+                id="contact-form"
+                enctype="multipart/form-data"
+                method="POST"
+              >
+                {% csrf_token %} {{ form.as_p }}
+                <div id="cf-submit">
+                  <button
+                    type="submit"
+                    id="contact-submit"
+                    class="btn btn-transparent"
+                    value="Submit"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!-- ./End Contact Form -->
+
+            {% endblock content%}
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
