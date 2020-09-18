@@ -1,8 +1,15 @@
 from django.shortcuts import render
 from blog.models import Blog
+
+
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+from datetime import datetime
+import calendar
+
 from events.models import Events
 from .models import Thought,Schedule
-from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+
+
 
 
 
@@ -12,10 +19,27 @@ def home(request):
     
     
     blog    = Blog.objects.filter(trends = 'Y')
+
+   #finding the current day   THe hard way
+    day_today     = datetime.today()
+    string  = str(day_today)
+    year = int(string[:4])
+    month = int(string[5:7])
+    day = int(string[8:10])
+    today  = calendar.weekday(year,month,day)
+    day_name= ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday','sunday']
+
+    th = Thought.objects.filter(day=day_name[today])
+
+ 
+
+    return render(request,'index.html', {'th':th,'blog':blog})
+
     th = Thought.objects.all()
     sch=Schedule.objects.all()
 
     return render(request,'index.html', {'th':th,'blog':blog,'sch':sch})
+
 
 
 def blog(request):
@@ -37,7 +61,10 @@ def blog(request):
 def blog_detail(request,name):
     context = Blog.objects.filter(name=name)
 
+
     return render(request,'blog-single.html',{'context':context})
+
+
 
 
 
