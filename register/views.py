@@ -9,7 +9,7 @@ def register(request):
     if request.method == "POST":
         form = DocumentForm(request.POST, request.FILES)
         if form.is_valid():
-           x=form.save()
+           form.save()
     else:
         form=DocumentForm()    
    
