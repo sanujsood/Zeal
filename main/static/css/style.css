@@ -41,7 +41,7 @@ h2 {
 }
 
 h3 {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 h4 {
@@ -70,7 +70,7 @@ a:focus, .th-nav-btn:focus, .btn:focus {
 }
 
 ul {
-  margin: 0;
+  margin: 10;
   padding: 0;
   list-style: none;
 }
@@ -102,7 +102,7 @@ button:hover, button:focus {
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1px;
-  padding: 11px 18px;
+  padding: 10px 20px;
   transition: 0.5s;
 }
 
@@ -126,8 +126,8 @@ button:hover, button:focus {
 .media-link a {
   color: #212121;
   display: inline-block;
-  margin: 0 7px;
-  font-size: 18px;
+  margin: 0 9px;
+  font-size: 20px;
   transition: 0.5s;
 }
 
@@ -161,7 +161,7 @@ button:hover, button:focus {
 }
 
 .post-count {
-  padding: 3px 10px;
+  padding: 5px 10px;
   background: #171717;
 }
 
@@ -182,7 +182,7 @@ button:hover, button:focus {
   color: #fff;
   transition: 0.5s;
   position: absolute;
-  top: 2px;
+  top: 4px;
   right: 15px;
 }
 
@@ -311,7 +311,7 @@ button:hover, button:focus {
   bottom: -2px;
   opacity: 0;
   width: 0;
-  height: 1px;
+  height: 2px;
   transition: 0.5s;
   background: #facd8a;
 }
@@ -347,7 +347,7 @@ button:hover, button:focus {
 
 /* Portfolio Page */
 .header.main.portfolio-header {
-  background: url(../img/header_bg/portfolio-folding-img.jpg) no-repeat;
+  background: url("https://image.shutterstock.com/image-photo/bright-spring-view-cameo-island-260nw-1048185397.jpg") no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -405,8 +405,8 @@ div.loading {
 
 .windows8 {
   position: relative;
-  width: 52px;
-  height: 52px;
+  width: 50px;
+  height: 50px;
   margin: auto;
 }
 
