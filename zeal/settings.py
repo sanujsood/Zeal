@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'newsletter',
     'events',
     'register',
+    'team',
     ]
 
 
@@ -114,7 +115,7 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
-
+# DATETIME_FORMAT = '%d-%m-%Y %H:%M:%S'
 USE_I18N = True
 
 USE_L10N = True
