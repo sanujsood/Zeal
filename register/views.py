@@ -2,7 +2,6 @@ from django.shortcuts import render
 from .models import Register
 from register.forms  import DocumentForm
 
-
 # Create your views here.
 
 def register(request):

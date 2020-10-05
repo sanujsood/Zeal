@@ -17,7 +17,7 @@ def send_newsletter(request):
     if request.method == "POST" and not request.user.is_staff:
             email    = request.POST['email']
             if Email.objects.filter(email=email).exists():
-                 messages.info(request, 'You are already in our Family')
+                messages.info(request, 'You are already in our Family')
             else:
                 data = Email(email=email)
                 data.save()
@@ -26,7 +26,7 @@ def send_newsletter(request):
     if request.user.is_staff:
         if request.method == 'POST':
             context = News.objects.all()
-            subject = "Hi From ElectroHost"
+            subject = "Zeal Newsletter"
             plain_message="New Content uploaded do pay a visit to our site"
             message = render_to_string('mail-news.html',{'context':context})
             message.content_subtype = "html"
@@ -42,7 +42,7 @@ def send_newsletter(request):
             for i in subscriber:
                 if '@' in i.email:
                     recievers.append(i.email)
-            print(recievers)
+            # print(recievers)
             send_mail(subject, plain_message, EMAIL_HOST_USER, recievers,html_message=message)
               
         return render(request,"newsletter.html")
